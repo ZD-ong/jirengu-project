@@ -49,3 +49,23 @@ body {
     line-height: 35px;
     padding: 2px;
 }
+.iconfont {
+    color: #888;
+}
+.icon-like {
+    margin-left: 5px;
+}
+.icon-money {
+    margin-left: 5px;
+}
+.icon-view {
+    margin-left: 5px;
+}
+.icon-comment {
+    margin-left: 5px;
+}
+.date {
+    color: #888;
+    font-size: 12px;
+    padding-left: 3px;
+}
