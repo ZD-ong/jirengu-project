@@ -6,6 +6,7 @@
 }
 html,body {
     height: 100%;
+    width: 100%;
     font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
 }
 ul {
@@ -73,8 +74,27 @@ header {
     border: 0;
 }
 .profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100%;
+    margin: 60px;
+}
+.profile-header {
+    text-align: center;
+    margin: 60px;
+    font-size: 30px;
+    color: #444;
+}
+.profile-item {
+    display: inline-block;
+    float: left;
+    width: 33.333%;
+    text-align: center;
+}
+.pro-icon {
+    height: 100px;
+    width: 100px;
+    margin: 60px;
+}
+.pro-dd {
+    display: block;
+    text-align: left;
 }
