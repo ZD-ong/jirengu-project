@@ -137,6 +137,7 @@ section .highlight figure {
 section .highlight a {
     display: block;
     height: 200px;
+    position: relative;
 }
 section .highlight a:hover::before {
     content: '+';
@@ -145,7 +146,7 @@ section .highlight a:hover::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #f7ba3e(256, 128, 80, 0.4);
+    background: #f7ba3e;
     color: #fff;
     font-size: 80px;
     display: flex;
