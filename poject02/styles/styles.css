@@ -25,6 +25,10 @@ ul {
     padding: 5px 10px;
     border-radius: 4px;
 }
+.button:hover {
+    color: #f7ba3e;
+    background-color: #fff;
+}
 body {
     font-size: 14px;
     line-height: 1.5;
@@ -147,7 +151,7 @@ section .highlight a:hover::before {
     right: 0;
     bottom: 0;
     background-color: #f7ba3e;
-    opacity: 0.7;
+    opacity: 0.8;
     color: #fff;
     font-size: 80px;
     display: flex;
@@ -237,8 +241,18 @@ section .highlight p {
     color: gray;
     width: 70%;
     margin: 50px auto 0 auto;
-    padding-bottom: 100px;
 }
+.adv {
+    width: 100%;
+    margin: 0 auto;
+}
+.adv li {
+    float: left;
+    width: calc(25% - 20px);
+    margin: 10px;
+    padding-bottom: 50px;
+}
+
 .form-bg {
     height: 100%;
     background: url(../images/footer.jpg) center center no-repeat;
@@ -296,6 +310,9 @@ footer .design {
 }
 .other a {
     margin-right: 20px;
-    color:  #f7ba3e;
+    color:  #666;
+}
+.other a:hover {
+    color: #f7ba3e;
 }
 
