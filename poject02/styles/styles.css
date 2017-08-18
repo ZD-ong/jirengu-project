@@ -133,6 +133,9 @@ section > ul > li {
 section > ul p {
     margin-top: 10px;
 }
+section .service {
+    padding-top: 70px;
+}
 section .highlight {
     padding-top: 70px;
 }
