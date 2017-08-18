@@ -136,7 +136,7 @@ section .highlight figure {
 }
 section .highlight a {
     display: block;
-    height: 200px;
+    height: 220px;
     position: relative;
 }
 section .highlight a:hover::before {
@@ -239,3 +239,63 @@ section .highlight p {
     margin: 50px auto 0 auto;
     padding-bottom: 100px;
 }
+.form-bg {
+    height: 100%;
+    background: url(../images/footer.jpg) center center no-repeat;
+    background-size: cover;
+    margin-top: 0;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px; 
+}
+.container h1 {
+    color: #fff;
+    padding-top: 60px;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+.container form {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+.input-box {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+.input-box input {
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size:14px;
+    color:#555;
+}
+.input-box textarea {
+    padding: 20px;
+    width: 100%;
+    height:190px;
+    border-radius: 5px;
+    font-size:14px;
+    color:#555;
+}
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+footer .foot {
+    float: left;
+    width: 33.333%;
+}
+footer .design {
+    line-height: 45px;
+}
+.other a {
+    margin-right: 20px;
+    color:  #f7ba3e;
+}
+
