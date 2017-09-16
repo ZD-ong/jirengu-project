@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+    <ul class="ct">
+      <li data-img="http://upload-images.jianshu.io/upload_images/6882087-98d77ff49255358e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">鼠标放置查看图片1</li>
+      <li data-img="https://i.loli.net/2017/09/16/59bcfcbe29c03.png">鼠标放置查看图片2</li>
+      <li data-img="https://i.loli.net/2017/09/16/59bd3550ca4df.png">鼠标放置查看图片3</li>
+    </ul>
+<div class="img-preview">
+  <img src="https://i.loli.net/2017/09/16/59bcb5086b345.png" alt="placeholder">
+</div>
+<script>
+   
+	  var gallery = document.querySelector('.ct')
+	  var arrLi = gallery.querySelectorAll('li')
+	  var placeholder = document.querySelector('.img-preview')
+
+	  for (var i = 0; i < arrLi.length; i++) {
+	  	arrLi[i].addEventListener('mouseenter',function(){
+	  		var dataImg = this.getAttribute('data-img')
+	  		placeholder.innerHTML = '<img src="' + dataImg + '">'
+	  	})
+	  };
+
+</script>
+</body>
+</html>
