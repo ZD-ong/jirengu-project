@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .mod-tab {
+            margin-top: 30px; 
+        }
+        .mod-tab .header {
+
+        }
+        .mod-tab .header:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .mod-tab .header .tab {
+            float: left;
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            background-color: #ddd;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .mod-tab .header .tab.active {
+            background-color: #fff;
+        }
+        .mod-tab .header .tab:last-child {
+            border-right: 1px solid #ccc;
+        }
+        .mod-tab .content {
+            border: 1px solid #ccc;
+            background-color: #fff;
+            width: 300px;
+            height: 200px;
+        }
+        .mod-tab .content .panel {
+            background-color: #fff;
+            display: none;
+            padding: 30px;
+        }
+        .mod-tab .content .panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="mod-tab">
+        <div class="header">
+            <div class="tab active">1</div>
+            <div class="tab">2</div>
+            <div class="tab">3</div>
+            <div class="tab">4</div>
+        </div>
+        <div class="content">
+            <div class="panel active">panel1</div>
+            <div class="panel">panel2</div>
+            <div class="panel">panel3</div>
+            <div class="panel">panel4</div>
+        </div>
+    </div>
+    <div class="mod-tab">
+        <div class="header">
+            <div class="tab active">1</div>
+            <div class="tab">2</div>
+            <div class="tab">3</div>
+            <div class="tab">4</div>
+        </div>
+        <div class="content">
+            <div class="panel active">panel1</div>
+            <div class="panel">panel2</div>
+            <div class="panel">panel3</div>
+            <div class="panel">panel4</div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.mod-tab .tab').forEach(function(node){
+            //打印出所有的tab
+            console.log(node);
+            //监听click事件
+            node.addEventListener('click', function(){
+                var index;
+                //遍历被点击的这个元素的父亲元素下所有的tab
+                this.parentElement.querySelectorAll('.tab').forEach(function(tab,idx){
+                    //去掉active类
+                    tab.classList.remove('active');
+                    //如果这个元素是tab，将下标赋值给panel的下标
+                    if(node === tab){
+                        index = idx;
+                    }
+                });
+                //给这个被点击的元素加上active类
+                this.classList.add('active');
+                //给下一个mod-tab执行添加和删除类的操作
+                this.parentElement.nextElementSibling.querySelectorAll('.panel').forEach(function(panel){
+                    panel.classList.remove('active');
+                });
+                this.parentElement.nextElementSibling.querySelectorAll('.panel')[index].classList.add('active');            
+            });
+        });
+    </script>
+</body>
+</html>
