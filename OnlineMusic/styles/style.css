@@ -1,0 +1,101 @@
+/* common style */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body, main {
+    height: 100%;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* .cover {
+    position: relative;
+    height: 100%;
+    min-height: 600px;
+    background: url(../images/album1.jpg) center center no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+} */
+
+/* header style */
+.header {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+.header .icon-login {
+    float: right;
+    margin-right: 20px;
+    font-size: 30px;
+    color: #eee;
+    cursor: pointer;
+}
+/* content style */
+.main {
+    padding: 60px 120px 60px;
+}
+
+.main .control {
+    float: left;
+    margin-right: 110px;
+}
+.main .control .album-img {
+    width: 356px;
+    height: 356px;
+}
+.main .control .album-img img {
+    width: 100%;
+    height: 100%;
+}
+.main .control .control-panel {
+    text-align: center;
+    padding: 16px;
+}
+.main .control .control-panel span {
+    padding: 0 30px;
+    display: inline-block;
+    font-size: 30px;
+    color: #e83c3c;
+    cursor: pointer;
+}
+
+.main .info .album-name {
+    display: inline-block;
+    background: #dd4b39;
+    padding: 8px 15px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.main .info .description {
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+.main .info .data>span {
+    padding: 0 60px 0 0;
+}
+.main .info .data>span .word {
+    padding-left: 10px;
+}
+.main .info .progress {
+    width: 400px;
+}
+.main .info .progress .bar{
+    height: 3px;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
