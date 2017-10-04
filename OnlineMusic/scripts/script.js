@@ -29,23 +29,11 @@ function $(selector){
     return document.querySelector(selector);
 }
 
-// $('.content .main .control .control-panel:nth-child(2)').onclick = function(){
-//     audio.pause();
-//     this.querySelector('.conetent .main .control .control-panel:nth-child(2)').classList.remove('icon-stop');
-//     this.querySelector('.comtent .main .control .control-panel:nth-child(2)').classList.add('icon-play');
-// }
-
-$('.content .main .control .control-panel: nth-child(2)').onclick = function(){
-    if(audio.paused){
-      audio.play()
-      this.querySelector('.content .main .control .control-panel: nth-child(2)').classList.remove('icon-play');
-      this.querySelector('.content .main .control .control-panel: nth-child(2)').classList.add('icon-stop');
-    }else {
-      audio.pause()
-      this.querySelector('.content .main .control .control-panel: nth-child(2)').classList.remove('icon-stop');
-      this.querySelector('.content .main .control .control-panel: nth-child(2)').classList.add('icon-play');
-    }
-  }
+$('.content .main .control .control-panel .icon-stop').onclick = function(){
+    audio.pause();
+    this.querySelector('.control-panel:nth-child(2)').classList.remove('icon-stop');
+    this.querySelector('.control-panel:nth-child(2)').classList.add('icon-play');
+}
 
 
 function getMusicList(callback){
