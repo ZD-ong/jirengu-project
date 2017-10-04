@@ -42,6 +42,23 @@ $('.content .main .control .control-panel .pause').onclick = function(){
 }
 
 
+
+
+// $('.musicbox .play').onclick = function(){
+//     if(audio.paused){
+//       audio.play()
+//       this.querySelector('.fa').classList.remove('fa-play')
+//       this.querySelector('.fa').classList.add('fa-pause')
+//     }else {
+//       audio.pause()
+//       this.querySelector('.fa').classList.add('fa-play')
+//       this.querySelector('.fa').classList.remove('fa-pause')
+//     }
+//   }
+
+
+
+
 function getMusicList(callback){
     var xhr =new XMLHttpRequest();
     xhr.open('GET', 'music.json', true);
