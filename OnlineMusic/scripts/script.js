@@ -29,10 +29,16 @@ function $(selector){
     return document.querySelector(selector);
 }
 
-$('.content .main .control .control-panel .icon-stop').onclick = function(){
-    audio.pause();
-    this.querySelector('.control-panel:nth-child(2)').classList.remove('icon-stop');
-    this.querySelector('.control-panel:nth-child(2)').classList.add('icon-play');
+$('.content .main .control .control-panel .pause').onclick = function(){
+    if(audio.paused){
+        audio.play();
+        this.classList.remove('icon-play');
+        this.classList.add('icon-stop');
+    }else{
+        audio.pause();
+        this.classList.remove('icon-stop');
+        this.classList.add('icon-play');
+    }
 }
 
 
