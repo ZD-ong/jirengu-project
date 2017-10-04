@@ -126,7 +126,7 @@ a {
     display: block;
     position: absolute;
     width: 100%;
-    height: calc(100% - 490px);
+    height: calc(100% - 510px);
     background: rgba(224, 219, 219, 0.5);
 }
 .footer .album-list {
