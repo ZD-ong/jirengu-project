@@ -131,7 +131,7 @@ a {
     position: absolute;
     width: 100%;
     height: calc(100% - 490px);
-    background: rgba(224, 219, 219, 0.5);
+    background: rgba(224, 219, 219, 0.2);
 }
 .footer .album-list {
     width: calc(100% - 320px);
