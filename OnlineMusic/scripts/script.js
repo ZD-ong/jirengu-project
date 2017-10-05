@@ -5,7 +5,6 @@ var audio = new Audio();
 audio.autoplay = true;
 
 getMusicList(function(List){
-    console.log(List);
     musicList = List;
     loadMusic(List[currentIndex]);
 });
@@ -114,7 +113,6 @@ function getMusicList(callback){
     xhr.send();
 }
 function loadMusic(musicObj){
-    console.log('begin play', musicObj);
     $('.content .info .song-name').innerText = musicObj.title;
     $('.content .info .author').innerText = musicObj.author;
     $('.content .info .album-name').innerText = musicObj.album;
@@ -122,4 +120,20 @@ function loadMusic(musicObj){
     $('.content .main .control .album-img').innerHTML ='<img src="' + musicObj.img + '">';
     $('.cover').style.backgroundImage = 'url(' + musicObj.img + ')';
     audio.src = musicObj.src;
+}
+
+
+$('.footer .album-list').onclick = function(e){
+    console.log(e.target);//<img>
+    console.log(this);//albumlist
+    console.log(this.children);//figure数组
+    if(e.target.tagName.toLowerCase() === 'img'){
+        for(let i = 0; i < this.children.length; i++){
+            if(this.children[i] === e.target){
+                currentIndex = i;
+            }
+        }
+    }
+    console.log(currentIndex);//0
+    loadMusic(musicList[currentIndex]);
 }
