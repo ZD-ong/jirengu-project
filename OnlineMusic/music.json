@@ -4,22 +4,44 @@
   "author": "Maroon 5",
   "album": "What Lovers Do",
   "description": "What Lovers Do - Maroon 5",
-  "img": "http://cloud.hunger-valley.com/17-9-22/28212907.jpg"
+  "img": "images/album1.jpg"
 }, {
-  "src": "http://cloud.hunger-valley.com/music/ifyou.mp3",
-  "title": "IF YOU1",
-  "author": "Big Bang",
-  "img": "http://cloud.hunger-valley.com/17-9-22/87786461.jpg"
+  "src": "https://zd-ong.github.io/MusicBox/Starboy.mp3",
+  "title": "Starboy",
+  "author": "The Weeknd",
+  "album": "Starboy",
+  "description": "Starboy - The Weeknd",
+  "img": "images/album2.jpg"
 },
 {
-  "src": "http://cloud.hunger-valley.com/music/ifyou.mp3",
-  "title": "IF YOU2",
-  "author": "Big Bang",
-  "img": "http://cloud.hunger-valley.com/17-9-22/87786461.jpg"
+  "src": "https://zd-ong.github.io/MusicBox/Youth.mp3",
+  "title": "YOUTH",
+  "author": "Troye Sivan",
+  "album": "Blue Neighbourhood (Deluxe)",
+  "description": "Blue Neighbourhood - Troye Sivan",
+  "img": "images/album3.jpg"
 },
 {
-  "src": "http://cloud.hunger-valley.com/music/ifyou.mp3",
-  "title": "IF YOU3",
-  "author": "Big Bang",
-  "img": "http://cloud.hunger-valley.com/17-9-22/87786461.jpg"
+  "src": "https://zd-ong.github.io/MusicBox/I%20Feel%20It%20Comming.mp3",
+  "title": "I Feel It Coming",
+  "author": "The Weeknd",
+  "album": "I Feel It Coming",
+  "description": "I Feel It Coming - The Weeknd",
+  "img": "images/album4.jpg"
+},
+{
+  "src": "https://zd-ong.github.io/MusicBox/Despacito.mp3",
+  "title": "Despacito",
+  "author": "Luis Fonsi/Daddy Yankee/Justin Bieber",
+  "album": "Despacito",
+  "description": "Despacito - Luis Fonsi/Daddy Yankee/Justin Bieber",
+  "img": "images/album5.jpg"
+},
+{
+  "src": "https://zd-ong.github.io/MusicBox/I'm%20the%20One.mp3",
+  "title": "I'm the One",
+  "author": "DJ Khaled/Justin Bieber...",
+  "album": "I'm the One",
+  "description": "I'm the One - DJ Khaled/Justin Bieber...",
+  "img": "images/album6.jpg"
 }]
