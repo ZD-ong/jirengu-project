@@ -147,15 +147,15 @@ a {
     margin: 10px 10px 0 10px; 
     float: left;
 }
-.footer .album-list figure a {
+.footer .album-list figure {
     display: block;
     position: relative;
 }
-.footer .album-list figure a img {
+.footer .album-list figure img {
     width: 80%;
     height: 80%;
 }
-.footer .album-list figure a img:hover {
+.footer .album-list figure img:hover {
     box-shadow: 0px 3px 4px 5px rgba(0, 0, 0,0.2);
 }
 .footer .album-list figure figcaption {
