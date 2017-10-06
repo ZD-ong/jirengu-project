@@ -40,6 +40,9 @@ audio.onended = function(){
 function $(selector){
     return document.querySelector(selector);
 }
+function $$(selector){
+    return document.querySelectorAll(selector);
+}
 
 $('.content .main .control .control-panel .pause').onclick = function(){
     if(audio.paused){
@@ -122,18 +125,86 @@ function loadMusic(musicObj){
     audio.src = musicObj.src;
 }
 
+//figure的方法，不成功
+// $('.footer .album-list').onclick = function(e){
+//     console.log(e.target);//<img>
+//     console.log(this);//albumlist
+//     console.log(this.children);//figure数组
+//     if(e.target.tagName.toLowerCase() === 'img'){
+//         for(let i = 0; i < this.children.length; i++){
+//             if(this.children[i] === e.target){
+//                 currentIndex = i;
+//             }
+//         }
+//     }
+//     console.log(currentIndex);//0
+//     loadMusic(musicList[currentIndex]);
+// }
 
-$('.footer .album-list').onclick = function(e){
-    console.log(e.target);//<img>
-    console.log(this);//albumlist
-    console.log(this.children);//figure数组
-    if(e.target.tagName.toLowerCase() === 'img'){
-        for(let i = 0; i < this.children.length; i++){
-            if(this.children[i] === e.target){
-                currentIndex = i;
-            }
+// $$(".album-list img).forEach(function(e,i){
+// 	e.onclick = function(){
+// 		playMusic(music[i])
+// })
+
+//获取全部的图片，这个坑就是多用console.log进行不断调试，确定你绑定事件的到底是哪一个元素
+$$('.album-list img').forEach(function(e,i){
+    console.log(e);
+    if(e.tagName.toLowerCase() === 'img'){
+        e.onclick = function(){
+            loadMusic(musicList[i]);
         }
     }
-    console.log(currentIndex);//0
-    loadMusic(musicList[currentIndex]);
-}
+    
+})
+
+
+
+// 使用li包裹图片依然失败
+// $('.footer .album-list ul').onclick = function(e){
+//     console.log(e.target);
+//     console.log(this);
+//     console.log(this.children);
+//     if(e.target.tagName.toLowerCase() === 'li'){
+//         for(var i = 0; i < this.children.length; i++){
+//             if(this.children[i] === e.target){
+//                 currentIndex = i;
+//             }
+//         }
+//     }
+//     console.log(currentIndex);//0
+//     loadMusic(musicList[currentIndex]);
+// }
+
+//div方法
+// var albumImg = document.querySelectorAll('.footer .album-list .pic img');
+// albumImg.onclick = function(e){
+//     console.log(e.target);
+//     console.log(this);
+//     console.log(this.children);
+//     if(e.target.tagName.toLowerCase() === 'img'){
+//         for(var i = 0; i < this.children.length; i++){
+//             if(this.children[i] === e.target){
+//                 currentIndex = i;
+//             }
+//         }
+//     }
+//     console.log(currentIndex);//0
+//     loadMusic(musicList[currentIndex]);
+// }
+
+
+//方方老师让写的index函数。。。没写出来
+// var albumList = $('.footer .album-list');
+// //var img = document.querySelectorAll('.footer .album-list figure img');
+// var img = $('#album1');
+
+// function elementIndex(element) {
+//     let albumList = img.parentNode.children;
+//     for (let index = 0; i < albumList.length; i++) {
+//       if (albumList[i] === img) {
+//         return i;
+//       }
+//     }
+//     return -1;
+//   }
+  
