@@ -11,6 +11,7 @@ getMusicList(function(List){
 
 audio.ontimeupdate = function(){
     $('.content .info .progress .bar .progress-now').style.width = (this.currentTime/this.duration)*100 + '%';
+    $('.play .play-bar .play-progress-now').style.width = (this.currentTime/this.duration)*100 + '%';
 }
 
 audio.onplay= function(){
@@ -19,6 +20,7 @@ audio.onplay= function(){
     var sec = Math.floor(audio.currentTime)%60 + '';
     sec = sec.length === 2? sec : '0' + sec;
     $('.content .info .time').innerText = min + ':' + sec;
+    $('.play .play-time').innerText = min + ':' + sec;
     }, 1000);
     if(audio.play){
         $('.pause').classList.remove('icon-play');
@@ -122,6 +124,11 @@ function loadMusic(musicObj){
     $('.content .info .description').innerText = musicObj.description;
     $('.content .main .control .album-img').innerHTML ='<img src="' + musicObj.img + '">';
     $('.cover').style.backgroundImage = 'url(' + musicObj.img + ')';
+    //play中的数据
+    $('.play .play-img').innerHTML ='<img src="' + musicObj.img + '">';
+    $('.play .play-title').innerText = musicObj.title;
+    $('.play .play-author').innerText = musicObj.author;
+
     audio.src = musicObj.src;
 }
 
@@ -296,3 +303,18 @@ $('.modal-register form').addEventListener('submit', function(e){
     //提交
     this.submit();      
   })
+
+
+  //鼠标10秒不动显示play页面
+function change(){
+    $('.content').classList.add('hide');
+    $('.play').classList.remove('hide');
+}
+
+var changeKey = setInterval(change, 15000);
+$('body').addEventListener('mousemove', function(){
+    clearInterval(changeKey);
+    $('.content').classList.remove('hide');
+    $('.play').classList.add('hide');
+    changeKey = setInterval(change, 3000);
+});
