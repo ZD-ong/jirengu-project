@@ -316,5 +316,5 @@ $('body').addEventListener('mousemove', function(){
     clearInterval(changeKey);
     $('.content').classList.remove('hide');
     $('.play').classList.add('hide');
-    changeKey = setInterval(change, 3000);
+    changeKey = setInterval(change, 15000);
 });
