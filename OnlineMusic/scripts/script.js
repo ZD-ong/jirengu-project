@@ -311,11 +311,11 @@ function change(){
     $('.play').classList.remove('hide');
 }
 
-var changeKey = setInterval(change, 15000);
+var changeKey = setInterval(change, 10000);
 $('body').addEventListener('mousemove', function(){
     clearInterval(changeKey);
     $('.content').classList.remove('hide');
     $('.play').classList.add('hide');
     //謝尹建議加一個定時器，保證15秒才切換
-    changeKey = setInterval(change, 15000);
+    changeKey = setInterval(change, 10000);
 });
