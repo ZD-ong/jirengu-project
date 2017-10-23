@@ -241,7 +241,7 @@ a {
 .footer .album-list {
     width: calc(100% - 320px);
     margin: 20px auto;
-    padding: 0 30px;
+/*  padding: 0 30px; */
     text-align: center;
 }
 /* .footer .album-list .pic {
