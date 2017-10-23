@@ -234,6 +234,7 @@ a {
     content: "";
     display: block;
     position: absolute;
+    bottom: 0;
     width: 100%;
     height: calc(100% - 490px);
     background: rgba(224, 219, 219, 0.2);
