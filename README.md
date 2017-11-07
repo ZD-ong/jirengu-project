@@ -1,6 +1,7 @@
 # jirengu-project
 
 ### first page: https://zd-ong.github.io/jirengu-project/project01/index.html
+### pikachu: https://zd-ong.github.io/jirengu-project/pikachu/index.html
 ### demo: https://zd-ong.github.io/jirengu-project/demo.html
 ### zhihu page: https://zd-ong.github.io/jirengu-project/pages/pages.html
 ### Inception: https://zd-ong.github.io/jirengu-project/poject02/index.html
